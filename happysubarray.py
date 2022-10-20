@@ -11,18 +11,17 @@ for ti in range(t) :
 	## prefix sums starts ##
 	prefixsums = 0
 	for i in range(n) :
-		element = l[i]
 
-		if element < 0: continue
+		if l[i] < 0: continue
 		
-		adder = element
+		adder = l[i]
 		for j in range(i,n) :
 			print('l[j]',l[j])
 
 			if j == i :
-				adder = element
+				adder = l[i]
 
-			elif element + l[j] >= 0 :
+			elif l[i] + l[j] >= 0 :
 				adder += l[j]
 
 			else : # if the sum becomes negative then this quits this for loop
