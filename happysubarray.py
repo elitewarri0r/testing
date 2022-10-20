@@ -25,7 +25,7 @@ for ti in range(t) :
 			elif element + l[j] >= 0 :
 				adder += l[j]
 
-			else :
+			else : # if the sum becomes negative then this quits this for loop
 				print('Broken')
 				break
 			
